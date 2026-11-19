@@ -1,41 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <title>Frontend Mentor | Fylo data storage component</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Fylo Data Storage</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <main class="flex min-h-screen items-center justify-center text-white">
-   <div class="text-4xl bg-white rounded-x1 mx-auto font-" >
-     <p> You’ve used 815 GB of your storage185 GB Left0 GB 1000 GB</p>
-  
+<body class="min-h-screen flex items-center justify-center">
 
-   </div>
-   
-  
-  
-  
-  
-  
+  <main class="container flex flex-col md:flex-row items-end gap-6 w-full max-w-5xl px-6">
+
+    <!-- Fylo Logo Section -->
+    <section class="bg-[#1e2c69] w-full md:w-[350px] p-10 rounded-tl-xl rounded-tr-[100px] rounded-bl-xl rounded-br-xl">
+
+      <img src="./images/logo.svg" alt="Fylo logo" class="mb-8">
+
+      <div class="flex items-center gap-4">
+
+        <div class="icon-box">
+          <img src="./images/icon-document.svg" alt="Documents">
+        </div>
+
+        <div class="icon-box">
+          <img src="./images/icon-folder.svg" alt="Folders">
+        </div>
+
+        <div class="icon-box">
+          <img src="./images/icon-upload.svg" alt="Upload">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Storage Box -->
+    <section class="bg-[#1e2c69] w-full p-8 rounded-xl relative">
+
+      <p class="text-white text-sm mb-4">
+        You’ve used <strong>815 GB</strong> of your storage
+      </p>
+
+      <!-- Progress Bar -->
+      <div class="w-full h-5 bg-[#FFA399] rounded-full p-1"> 
+
+        <div class="progress-bar h-full rounded-full relative"
+             style="width: 80.0%">
+
+          <div class="bg-white w-2 h-2 rounded-full absolute right-0 top-0.5"></div>
+
+        </div>
+
+      </div>
+
+      <!-- Storage GB -->
+      <div class="flex justify-between text-white text-xs font-bold mt-2">
+        <span>0 GB</span>
+        <span>1000 GB</span>
+      </div>
+
+      <!-- Storage left -->
+      <div class="remaining absolute">
+        <strong class="text-4xl text-[#0c122c]">185</strong>
+        <span class="text-gray-300 font-bold text-xs">GB LEFT</span>
+      </div>
+
+    </section>
+
   </main>
 
-
-
-
-
-  
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Laseim Johnson</a>.
-  </footer>
 </body>
 </html>

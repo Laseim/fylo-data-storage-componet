@@ -1,4 +1,15 @@
+@import url(https://fonts.google.com/specimen/Raleway:wght@400..700&display=swap);
+
+
 body{
     background-color: hsl(229, 57%, 11%);
     font-size: 14px;
 }
+
+
+@media (max-width: 767px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-size: cover;
+    background-position: center;
+  }
